@@ -59,12 +59,14 @@
 
 /* Social media buttons styling */
 .social-btn {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    color: #495057;
+    background: #f8f9fa !important;
+    border: 1px solid #dee2e6 !important;
+    color: #495057 !important;
     font-size: 0.875rem;
     padding: 0.25rem 0.5rem;
     box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
     height: 28px;
     display: flex;
     align-items: center;
@@ -72,9 +74,11 @@
 }
 
 .social-btn:hover {
-    background: linear-gradient(to bottom, #e9ecef 0%, #dee2e6 100%);
-    border-color: #adb5bd;
-    color: #495057;
+    background: linear-gradient(to bottom, #e9ecef 0%, #dee2e6 100%) !important;
+    border-color: #adb5bd !important;
+    color: #495057 !important;
+    box-shadow: none !important;
+    filter: none !important;
 }
 
 .tweet-btn i {
@@ -82,8 +86,10 @@
 }
 
 .tweet-btn:hover {
-    background: #1da1f2;
-    color: white;
+    background: #1da1f2 !important;
+    color: white !important;
+    box-shadow: none !important;
+    filter: none !important;
 }
 
 .like-btn i {
@@ -91,14 +97,16 @@
 }
 
 .like-btn:hover {
-    background: #4267b2;
-    color: white;
+    background: #4267b2 !important;
+    color: white !important;
+    box-shadow: none !important;
+    filter: none !important;
 }
 
 .counter-box {
-    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
-    border: 1px solid #dee2e6;
-    color: #495057;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%) !important;
+    border: 1px solid #dee2e6 !important;
+    color: #495057 !important;
     font-size: 0.75rem;
     font-weight: 500;
     padding: 2px 8px;
@@ -110,6 +118,8 @@
     height: 28px;
     line-height: 1.2;
     box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,6 +149,22 @@
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
     border-right: 3px solid #f8f9fa;
+}
+
+/* Force remove all shadows from social media elements */
+#stamp-card .social-btn,
+#stamp-card .counter-box,
+#stamp-card .social-btn:hover,
+#stamp-card .counter-box:hover,
+#stamp-card .social-btn:focus,
+#stamp-card .counter-box:focus,
+#stamp-card .social-btn:active,
+#stamp-card .counter-box:active {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
 }
 
 .vert-dashed-lg {
