@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Yellowtail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&family=Archivo:wght@400;600;700&family=ABeeZee:wght@400;700&display=swap');
 
 @font-face {
     font-family: 'ABeeZee';
@@ -8,7 +8,7 @@
 }
 
 .yellowtail {
-    font-family: "Yellowtail", cursive;
+    font-family: 'Yellowtail', cursive;
 }
 
 .archivo {
@@ -22,7 +22,7 @@
 
 /* Custom light gray text color to match DovesMedic and Sm */
 .text-light-gray {
-    color: #b8bcc8 !important;
+    color: #9ca3af !important;
 }
 
 
@@ -31,7 +31,7 @@
 
 /* Subscribe frame look closer to original (rounded corners and soft shadow) */
 .subscribe-frame {
-    background-color: #f8fafc; /* near gray-50 */
+    background: #f8f9fa;
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
@@ -48,23 +48,22 @@
         repeating-linear-gradient(-45deg, transparent 0, #F5F5F5 1px, transparent 0, transparent 8px);
     background-size: 16px 16px;
     background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Light dashed divider helpers */
-.divider-dashed { border-top: 1px dashed #dcdfe3; }
+.divider-dashed {
+    border-top: 1px dashed #d1d5db;
+    width: 100%;
+}
 
 /* Social media buttons styling */
 .social-btn {
-    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    background: #f8f9fa;
     border: 1px solid #dee2e6;
     color: #495057;
-    font-weight: 500;
-    padding: 2px 8px;
-    font-size: 0.75rem;
-    border-radius: 3px;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
-    height: auto;
-    line-height: 1.2;
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
 }
 
 .social-btn:hover {
@@ -77,25 +76,28 @@
     color: #1da1f2;
 }
 
+.tweet-btn:hover {
+    background: #1da1f2;
+    color: white;
+}
+
 .like-btn i {
     color: #1877f2;
 }
 
+.like-btn:hover {
+    background: #4267b2;
+    color: white;
+}
+
 .counter-box {
-    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    background: #e9ecef;
     border: 1px solid #dee2e6;
-    color: #495057;
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 2px 8px;
-    margin-left: 3px;
-    border-radius: 3px;
-    position: relative;
-    min-width: 20px;
+    border-left: 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    min-width: 30px;
     text-align: center;
-    height: auto;
-    line-height: 1.2;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .counter-box::before {
@@ -124,9 +126,17 @@
     border-right: 3px solid #f8f9fa;
 }
 
+.vert-dashed-lg {
+    position: relative;
+}
+
 @media (min-width: 992px) {
-  .vert-dashed-lg { 
-    border-right: 1px dashed #dcdfe3; 
-    margin-right: -1px;
-  }
+    .vert-dashed-lg:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        border-right: 1px dashed #d1d5db;
+    }
 }
